@@ -159,7 +159,30 @@ public class ProductdataApplicationTests {
 		session.evict(product);
 
 		repository.findById(1).get();
-
 	}
+	
+	//Stored Procedures
+	@Test
+	public void testFindAllProducts() {
+		
+		System.out.println(repository.findAllProducts());
+	}
+	
+	@Test
+	public void testFindAllProductsByPrice() {
+		
+		System.out.println(repository.findAllProductsByPrice(500));
+	}
+	
+	@Test
+	public void testFindAllProductsCountByPrice() {
+		
+		System.out.println(repository.findAllProductsCountByPrice(500));
+	}
+	
+	
+	
+	
+	
 
 }
